@@ -30,5 +30,10 @@
         <file>image/mark.png</file>
         <file>image/reset.png</file>
         <file>image/stop.png</file>
+        <file>image/status_close.png</file>
+        <file>image/status_open.png</file>
+        <file>image/snap.png</file>
+        <file>image/video.png</file>
+        <file>image/stopVideo.png</file>
     </qresource>
 </RCC>

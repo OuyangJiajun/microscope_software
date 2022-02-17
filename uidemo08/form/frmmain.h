@@ -55,6 +55,7 @@ private slots:
     void leftMainClick();//主界面左菜单槽函数
     void initLightSource();//初始化主界面光源部分
     void initStage();//初始化主界面位移台部分
+    void initCamera();//初始化主界面相机部分
     void initLeftConfig();//初始化设置界面左菜单
     void leftConfigClick();//设置界面左菜单槽函数
 };

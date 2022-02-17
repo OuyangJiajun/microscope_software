@@ -2,7 +2,6 @@
 #define STAGECONTROLPANEL_H
 
 #include <QWidget>
-#include <mypushbutton.h>
 
 namespace Ui {
 class StageControlPanel;
@@ -18,6 +17,12 @@ public:
 
 private:
     Ui::StageControlPanel *ui;
+    double absoluteX;//X绝对坐标
+    double absoluteY;//Y绝对坐标
+    double originX;//相对原点X坐标
+    double originY;//相对原点Y坐标
+    double relativeX;//X相对坐标
+    double relativeY;//Y相对坐标
 };
 
 #endif // STAGECONTROLPANEL_H

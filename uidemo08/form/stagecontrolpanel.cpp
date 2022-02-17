@@ -21,8 +21,25 @@ StageControlPanel::StageControlPanel(QWidget *parent) :
     ui->arrow_rightAndDown->setIcon(QIcon(":/image/arrow-down-right.png"));
     ui->setOrigin->setIcon(QIcon(":/image/mark.png"));
 
+    //按箭头给位移台发指令，同时定时更新坐标与滑条
+    //有很多个按钮
 
+    //修改滑动条给位移台发指令,同时定时更新坐标
+//    connect(ui->horizontalSlider,&QAbstractSlider::valueChanged,[=](){
+//        //给位移台发指令
+//    });
 
+    //修改坐标给位移台发指令,同时定时更新滑条
+
+    //按标记把当前绝对坐标记录
+    connect(ui->setOrigin,&QToolButton::clicked,[=](){
+        originX=absoluteX;
+        originY=absoluteY;
+    });
+
+    //按复位键归零
+
+    //按停止键停止
 }
 
 StageControlPanel::~StageControlPanel()

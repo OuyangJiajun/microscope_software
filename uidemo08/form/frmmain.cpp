@@ -12,6 +12,7 @@ frmMain::frmMain(QWidget *parent) : QWidget(parent), ui(new Ui::frmMain)
     this->initStyle();
     this->initLeftMain();
     this->initLightSource();
+    this->initStage();
     this->initLeftConfig();
 }
 
@@ -239,7 +240,12 @@ void frmMain::initLightSource()//初始化主界面光源部分
 
 void frmMain::initStage()//初始化主界面位移台部分
 {
+    //复位
 
+}
+
+void frmMain::initCamera()//初始化主界面相机部分
+{
 
 }
 

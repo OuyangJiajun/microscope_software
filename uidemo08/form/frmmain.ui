@@ -470,7 +470,7 @@
         <item>
          <widget class="QStackedWidget" name="stackedWidget_main">
           <property name="currentIndex">
-           <number>1</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="page_lightSource">
            <widget class="QLabel" name="label_chooseChannelNum">
@@ -1495,7 +1495,7 @@
                  </widget>
                 </item>
                 <item row="0" column="1">
-                 <widget class="QLineEdit" name="lineEdit"/>
+                 <widget class="QLineEdit" name="lineEdit_stage_absolute_x"/>
                 </item>
                 <item row="1" column="0">
                  <widget class="QLabel" name="label_stage_absolute_y">
@@ -1516,7 +1516,7 @@
                  </widget>
                 </item>
                 <item row="1" column="1">
-                 <widget class="QLineEdit" name="lineEdit_2"/>
+                 <widget class="QLineEdit" name="lineEdit_stage_absolute_y"/>
                 </item>
                </layout>
               </widget>
@@ -1562,7 +1562,7 @@
                  </widget>
                 </item>
                 <item row="0" column="1">
-                 <widget class="QLineEdit" name="lineEdit_3"/>
+                 <widget class="QLineEdit" name="lineEdit_stage_relative_x"/>
                 </item>
                 <item row="1" column="0">
                  <widget class="QLabel" name="label_stage_relative_y">
@@ -1577,7 +1577,7 @@
                  </widget>
                 </item>
                 <item row="1" column="1">
-                 <widget class="QLineEdit" name="lineEdit_4"/>
+                 <widget class="QLineEdit" name="lineEdit_stage_relative_y"/>
                 </item>
                </layout>
               </widget>
@@ -1632,17 +1632,14 @@
            </widget>
           </widget>
           <widget class="QWidget" name="page_camera">
-           <widget class="QLabel" name="label_3">
+           <widget class="CameraPanel" name="widget_26" native="true">
             <property name="geometry">
              <rect>
-              <x>340</x>
-              <y>240</y>
-              <width>251</width>
-              <height>191</height>
+              <x>0</x>
+              <y>20</y>
+              <width>711</width>
+              <height>491</height>
              </rect>
-            </property>
-            <property name="text">
-             <string>相机</string>
             </property>
            </widget>
           </widget>
@@ -1877,6 +1874,39 @@
     </widget>
    </item>
   </layout>
+  <action name="openCamera">
+   <property name="icon">
+    <iconset resource="../other/main.qrc">
+     <normaloff>:/image/status_close.png</normaloff>:/image/status_close.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开相机</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;打开相机&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="snap">
+   <property name="icon">
+    <iconset resource="../other/main.qrc">
+     <normaloff>:/image/snap.png</normaloff>:/image/snap.png</iconset>
+   </property>
+   <property name="text">
+    <string>拍照</string>
+   </property>
+  </action>
+  <action name="vidoe">
+   <property name="icon">
+    <iconset resource="../other/main.qrc">
+     <normaloff>:/image/video.png</normaloff>:/image/video.png</iconset>
+   </property>
+   <property name="text">
+    <string>录像</string>
+   </property>
+   <property name="toolTip">
+    <string>录像</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
@@ -1889,6 +1919,12 @@
    <class>StageControlPanel</class>
    <extends>QWidget</extends>
    <header>stagecontrolpanel.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CameraPanel</class>
+   <extends>QWidget</extends>
+   <header>camerapanel.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
